@@ -39,13 +39,13 @@ def lumi_weight(era):
 
 def MC_base_process_selection(channel, era):
     MC_base_process_weights = [
-        ("genweight/abs(genweight)", "genweight"),
+        ("genweight*sumwWeight*crossSectionPerEventWeight", "normWeight"),
+
         ("puweight", "puweight"),
+
         ("id_wgt_mu_1*id_wgt_mu_2", "idweight"),
         ("iso_wgt_mu_1*iso_wgt_mu_2", "isoweight"),
-        # ("numberGeneratedEventsWeight", "numberGeneratedEventsWeight"),
-        ("sumwWeight", "sumwWeight"),
-        ("crossSectionPerEventWeight", "crossSectionPerEventWeight"),
+
         lumi_weight(era),
     ]
     return Selection(name="MC base", weights=MC_base_process_weights)
@@ -53,9 +53,11 @@ def MC_base_process_selection(channel, era):
 
 def DY_process_selection(channel, era):
     DY_process_weights = MC_base_process_selection(channel, era).weights
-    cuts = [
-        ("(gen_match_1 != 15 && gen_match_2 != 15)", "tautauFilter")
-    ]
+    cuts = None
+    if channel in ["mm", "ee"]:
+        cuts = [
+            ("(gen_match_1 != 15 && gen_match_2 != 15)", "tautauFilter")
+        ]
     return Selection(name="DY", cuts=cuts, weights=DY_process_weights)
 
 

@@ -80,12 +80,9 @@ common_files_2018_UL = {
     #     # "ST_tW_top_5f_inclusiveDecays_TuneCP5_13TeV-powheg-pythia8",
     # ],
     "W": [
-        "WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8_RunIISummer20UL18NanoAODv9-106X",
-
-        # "W1JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8",
-        # "W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8",
-        # "W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8",
-        # "W4JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8",
+        "WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL18NanoAODv9-106X",
+        "WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL18NanoAODv9-106X",
+        "WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL18NanoAODv9-106X",
     ],
 }
 
