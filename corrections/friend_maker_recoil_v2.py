@@ -11,7 +11,7 @@ def parse_args():
     parser.add_argument('-W', '--wsdir', default='/work/jheitkoetter/MitEwk13TeV_CMSSW_94X/Recoil/final_run323778/',
                         help='directory of RooFitWorkSpace')
     parser.add_argument('-C', '--corr', default='Zmm', help='Correction Samples: Zmm, Zee, ...?')
-    parser.add_argument('-P', '--process', default='DY', help='Process: DY, TTToSemi, TTTo2L2Nu, W0J, W1J or W2J')
+    #parser.add_argument('-P', '--process', default='DY', help='Process: DY, TTToSemi, TTTo2L2Nu, W0J, W1J or W2J')
     parser.add_argument('-F', '--finalstate', default='mm', help='Final state: mm, ee, mmet or emet')
     parser.add_argument('-I', '--inpath', default='/ceph/moh/CROWN_samples/EarlyRun3_V08/ntuples/2018/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8_RunIISummer20UL18NanoAODv9-106X/', help='path to input samples')
     #parser.add_argument('-O', '--outpath', default='/ceph/jdriesch/CROWN_samples/EarlyRun3_V08/friends/2018/', help='path to output')
